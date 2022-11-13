@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+	text-transform: uppercase;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(to left, #fff 85%, #6C4AB6 20%);
+}
+
+.navsection {
+	display:  flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 20vh;
+}
+
+.logo {
+	width: 40%;
+	background-image: linear-gradient(#8D9EFF 60%, #B9E0FF 40%);
+	padding-left: 40px;
+}
+
+.logo h1 {
+	font-size: 2.6rem;
+	animation: leftright 2s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes leftright {
+	from {padding-left: 40px;}
+	to {padding-right: 100px;}
+}
+
+nav {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+}
+
+nav a {
+	text-decoration: none;
+	color: #000;
+	font-weight: 900;
+	position: relative;
+}
+
+nav a:first-child {
+	color: #6C4AB6;
+}
+
+nav a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 110%;
+	width: 0;
+	height:  2px;
+	border-bottom: 2px solid #6C4AB6;
+	transition: all 0.4s linear;
+}
+
+nav a:hover:before {
+	width: 100%;
+}
+
+/*main*/
+main {
+	height: 80vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.leftside h3{
+	margin: 20px 0;
+	font-size: 34px;
+	position: relative;
+}
+
+.leftside h3:after {
+	content: '';
+	width: 450px;
+	height:  3px;
+	position: absolute;
+	top:  50%;
+	left: 23%;
+	background: #000;
+}
+
+.leftside h1 {
+	margin: 20px 0;
+	font-size: 60px;
+}
+
+.leftside h2 {
+	margin: 20px 0;
+	font-size: 40px;
+	font-weight: 500;
+}
+
+.leftside .btn1, .btn2 {
+	color: #000;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.leftside .btn1 {
+	color: #000;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-image: linear-gradient(#8D9EFF 60%, #B9E0FF 30%);
+	border-radius: 5px;
+	font-weight: bold;
+	margin-right: 25px;
+}
+
+.leftside .btn2 {
+	background-color: #fff;
+	border: solid 2px #8D9EFF;
+	color: #000;
+	transition: all 0.4s ease-in;
+}
+
+.leftside .btn2:hover {
+	background-image: linear-gradient(#8D9EFF 60%, #B9E0FF 30%);
+}
+
+.rightside {
+	border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+	background-color: #8D9EFF;
+}
+
+.rightside img {
+	max-width: 500px;
+	height: auto;
+}
